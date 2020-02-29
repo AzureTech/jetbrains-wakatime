@@ -1,7 +1,7 @@
 <idea-plugin version="2" url="https://wakatime.com">
     <id>com.wakatime.intellij.plugin</id>
     <name>WakaTime</name>
-    <version>9.3.2</version>
+    <version>11.0.0</version>
     <vendor email="support@wakatime.com" url="https://wakatime.com">WakaTime</vendor>
 
     <description><![CDATA[
@@ -27,6 +27,44 @@
     ]]></description>
 
     <change-notes><![CDATA[
+11.0.0 (2020-02-23)<br />
+++++++++++++++++++<br />
+<br />
+- Download wakatime-cli standalone as zipped folder for improved performance.<br />
+<br />
+<br />
+10.0.2 (2020-02-23)<br />
+++++++++++++++++++<br />
+<br />
+- Use legacy PluginManager to read plugin version.<br />
+<br />
+<br />
+10.0.1 (2020-02-22)<br />
+++++++++++++++++++<br />
+<br />
+- Fix wakatime-cli filename on Windows platform.<br />
+<br />
+<br />
+10.0.0 (2020-02-22)<br />
+++++++++++++++++++<br />
+<br />
+- Use wakatime-cli standalone.<br />
+- Replace PluginManager usage with PluginManagerCore.<br />
+<br />
+<br />
+9.3.4 (2020-02-16)<br />
+++++++++++++++++++<br />
+<br />
+- Add com.intellij.modules.platform dependency. #131<br />
+- Use Python 3.8.1 bundled on Windows platforms.<br />
+<br />
+<br />
+9.3.3 (2019-11-01)<br />
+++++++++++++++++++<br />
+<br />
+- Suppress all exceptions from showing debug warning message. #126<br />
+<br />
+<br />
 9.3.2 (2018-10-24)<br />
 ++++++++++++++++++<br />
 <br />
@@ -622,8 +660,8 @@
 
     <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
          on how to target different products -->
-    <!-- uncomment to enable plugin in all products  -->
     <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
